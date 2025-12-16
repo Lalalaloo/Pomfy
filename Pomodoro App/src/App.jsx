@@ -1,14 +1,12 @@
 
 import './App.css'
-import click from click
+import Timer from './timer.jsx'
 function App() {
 
-  function handleClick() {
-    console.log("hii");
-  }
-
   return (
-    <click/>
+    <div>
+      <Timer/>
+    </div>
 
   );
 }
