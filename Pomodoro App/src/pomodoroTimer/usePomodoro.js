@@ -2,7 +2,7 @@
 //theres supposed to be 4 sessions before the long break.
 //rigth now, ive just created a function to keep track of the sessions.
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 export default function usePomodoro(){
@@ -28,8 +28,7 @@ export default function usePomodoro(){
     { 
       
       //if the time left is 0, and the mode is work, it changes to the next mode 
-      //if the mode is short break, it changes to work
-      //if the mode is long break, it changes to worK
+      //if the mode is short break, or long break, it changes to work
       if (mode === 'work'){
 
         const nextSession = sessions + 1
@@ -48,7 +47,7 @@ export default function usePomodoro(){
       if (sessions === 4){
         setSessions(0)
         setCycle(cycle + 1)
-        console.log("Good Job! You've completed a full cycle of work sessions!")
+        
       }
       
 

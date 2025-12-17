@@ -5,11 +5,11 @@ import { useEffect } from "react"
   export default function Timer(){
     const { mode, sessions, duration, cycle, handleTimerComplete } = usePomodoro()
     const timer = useTimer(duration, handleTimerComplete)
-   
+    
 
     useEffect(() => {
       timer.handleReset()
-      timer.handleStart()
+      
     }, [mode])
     
     return (

@@ -1,14 +1,13 @@
-
 import './App.css'
-import Timer from './timer.jsx'
+import Page from './Page.jsx'
 function App() {
 
   return (
     <div>
-      <Timer/>
+      <Page/>
     </div>
 
-  );
+  )
 }
 
 export default App;
