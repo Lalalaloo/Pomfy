@@ -3,13 +3,20 @@ import React, { useState } from 'react'
 
 export default function  TodoForm({addTodo}) {
   const [value, setValue] = useState("")
+  
+      
+  
 
   const handleSubmit = e => {
     e.preventDefault();
-    addTodo(value);
-    setValue("")
-  }
+    if (value.trim())
+    {
+      addTodo(value);
+      setValue("")
+    }
 
+  }   
+   
   return(
     <form onSubmit = {handleSubmit}> 
       <input 
@@ -18,7 +25,10 @@ export default function  TodoForm({addTodo}) {
         placeholder="Type Here..." 
         onChange = {(e) => setValue(e.target.value)} />
 
-      <button type = 'submit'>
+      <button 
+        type = 'submit'
+        disabled = {!value.trim()}
+        >
         Add
       </button>
     </form>

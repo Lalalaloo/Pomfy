@@ -8,6 +8,7 @@ export default function  EditTodoForm({editTodo, task}) {
     e.preventDefault();
     editTodo(value, task.id);
     setValue("")
+
   }
 
   return(
