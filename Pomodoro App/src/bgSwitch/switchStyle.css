@@ -1,0 +1,55 @@
+.bg-switcher{
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+
+.arrow-switch-left,
+.arrow-switch-right{
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+
+
+.dots{
+  display: flex;
+  gap: 1rem;
+}
+.dot{
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  opacity: 0.5;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  
+}
+
+.dot:hover{
+  transition: opacity 0.3s ease;
+  width: 0.6rem;
+  height: 0.6rem;
+  opacity: 1;
+  
+}
+
+.dot.active{
+  opacity: 1;
+}

@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import './bgStyle.css'
-import {image1, image2, image3} from '../assets/images'
+import './switchStyle.css'
+import {image1, image2, image3, image4} from '../assets/images'
 import BgSwitcher from './bgSwitcher.jsx'
 
 export default function BgStyle({ children }) {
   const [bgIndex, setBgIndex] = useState(0);
-  const bgImages = [image1, image2, image3];
+  const bgImages = [image1, image2, image3, image4];
 
   return(
     <div
@@ -13,12 +13,10 @@ export default function BgStyle({ children }) {
         backgroundImage: `url(${bgImages[bgIndex]})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        minHeight: '100vh',
-        width: '100vw',
         position: 'fixed',
         overflow: 'hidden',
-        top:0,
-        left:0,
+        width: '100%',
+        height: '100%',
       }}
     >
       {children}

@@ -1,5 +1,5 @@
 import React from 'react'
-import './bgStyle.css'
+import './switchStyle.css'
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function BgSwitcher({ bgIndex, setBgIndex, bgImages }) {
@@ -14,6 +14,7 @@ export default function BgSwitcher({ bgIndex, setBgIndex, bgImages }) {
   }
 
   return(
+    
     <div 
       className='bg-switcher'
    
@@ -23,26 +24,36 @@ export default function BgSwitcher({ bgIndex, setBgIndex, bgImages }) {
           <button 
             onClick={handlePrev}
             className='arrow-switch-left'>
-            <ChevronLeft size={32} />
+            <ChevronLeft size={25} />
           </button>
+
+
+          <div className='dots'>
+            {bgImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setBgIndex(index)}
+                className={
+                `dot ${index === bgIndex ? 'active' : ''}`}
+              >
+                &nbsp;
+              </button> 
+
+            ))}
+          </div>
+
+
+          
           <button 
             onClick={handleNext}
             className='arrow-switch-right'>
-            <ChevronRight size={32} />
+            <ChevronRight size={25}/>
           </button>
           
         </>
       
 
-      <div className='dots'>
-        {bgImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setBgIndex(index)}
-            className={`dot ${index === bgIndex ? 'active' : ''}`}
-          />
-        ))}
-      </div>
+     
     </div>
   )
 }

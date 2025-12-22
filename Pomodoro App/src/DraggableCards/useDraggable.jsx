@@ -1,6 +1,6 @@
 //this file creates a reusable draggable card component.
 //the Timer, music player, and to-do list will be draggable cards.
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 
 export default function useDraggable(initialX, initialY) {
@@ -8,7 +8,7 @@ export default function useDraggable(initialX, initialY) {
   const [position, setPosition] = useState({ x: initialX, y: initialY });
   const [isDragging, setIsDragging] = useState(false);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
-
+  const cardRef = useRef(null)
   //this function is to handle the mouse down event
   const handleMouseDown = (e) => {
     
@@ -23,10 +23,18 @@ export default function useDraggable(initialX, initialY) {
   useEffect( () => {
     const handleMouseMove = (e) => {
       
-      if (isDragging) {
+      if (isDragging && cardRef.current) {
+        const cardRect = cardRef.current.getBoundingClientRect();
+        const newX = e.clientX - offset.x;
+        const newY = e.clientY - offset.y;
+
+        //this is so it clamps to viewport and doesn't go out of bounds
+        const clampedX = Math.max(0, Math.min(newX, window.innerWidth - cardRect.width));
+        const clampedY = Math.max(0, Math.min(newY, window.innerHeight - cardRect.height));
+        
         setPosition({
-          x: e.clientX - offset.x,
-          y: e.clientY - offset.y,
+          x: clampedX,
+          y: clampedY
         });
       }
     };
@@ -50,5 +58,6 @@ export default function useDraggable(initialX, initialY) {
   return {
     position,
     handleMouseDown,
+    cardRef
   };
 }

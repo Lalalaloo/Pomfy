@@ -1,0 +1,172 @@
+.timer{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.minutes{
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 4rem;
+  width: 100%;
+  text-align: center;
+  letter-spacing: .5rem;
+}
+
+.hearts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .3rem;
+}
+
+.session-heart{
+  filter: drop-shadow(0 0 2px rgb(0, 0, 0, 0.3));
+  transition: fill 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+
+@keyframes heartFill{
+  0%{transform: scale(1); }
+  50%{transform: scale(1.4); }
+  100%{transform: scale(1); }
+}
+
+.session-heart.filled{
+  animation: heartFill 0.8s ease;
+}
+
+
+.smc{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1rem;
+  gap: 5rem;
+  color: #ffffff  ;
+  text-align: center;
+  
+}
+
+.mode{
+  font-size: 1rem;
+}
+
+.sessions{
+  font-family: "Patrick Hand SC", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+  
+}
+
+
+.timer-content{
+  transition: opacity 0.5s ease;
+}
+
+.timer-content.hidden{
+  opacity: 0;
+  pointer-events: none
+}
+
+
+.mode-change-overlay{
+  position: absolute;
+  top: 0;
+  inset: 0;
+  z-index: 10;
+  
+  display: flex;
+  padding-top: 3px;
+  justify-content: center;
+
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.mode-change-text{
+  text-align: center;
+  
+}
+
+
+.mode-change-text h2{
+  font-size: 2rem;
+  margin-bottom: 0;
+  color: #ffffff;
+  animation : fadeIn 0.5s ease;
+  
+  
+}
+
+.mode-change-text p{
+  font-size: 1rem;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  animation : popIn 0.5s ease;
+}
+
+@keyframes fadeIn{
+  from{opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes popIn{
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+.start-reset{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 4rem;
+  
+}
+
+.start,
+.reset{
+  cursor: pointer;
+  width: 9rem;
+  height: 2rem;
+  border: 2px solid #d97878;
+  border-radius: .9rem;
+  background-color: #d97878;
+  font-family: "Patrick Hand SC", cursive;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.pause{
+  cursor: pointer;
+  width: 9rem;
+  height: 2rem;
+  border: 2px solid #d97878;
+  border-radius: .9rem;
+  background-color: transparent;
+  font-family: "Patrick Hand SC", cursive;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.start:hover,
+.reset:hover,
+.pause:hover{
+  transition: all 0.5s ease;
+  transform: scale(1.05);
+}

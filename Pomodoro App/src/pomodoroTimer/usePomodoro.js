@@ -14,9 +14,9 @@ export default function usePomodoro(){
   
   const MODES = 
     { 
-      work : 25 ,
-    shortBreak : 5 ,
-    longBreak : 15 ,
+      work : 25,
+      shortBreak : 5,
+      longBreak : 15,
     }
   
 
@@ -37,6 +37,7 @@ export default function usePomodoro(){
         
         if (nextSession  % 4 === 0){
           setMode('longBreak')
+          
         } else {
           setMode('shortBreak')
         }
