@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import {Send} from 'lucide-react'
 
 export default function  EditTodoForm({editTodo, task}) {
   const [value, setValue] = useState("")
@@ -12,16 +12,22 @@ export default function  EditTodoForm({editTodo, task}) {
   }
 
   return(
-    <form onSubmit = {handleSubmit}> 
+    <form 
+      onSubmit = {handleSubmit}> 
+      <div className='edit-form'>
       <input 
+        className='edit-box'
         type="text" 
         value = {value} 
-        placeholder="Type Here..." 
+        placeholder="Update your task..." 
         onChange = {(e) => setValue(e.target.value)} />
 
-      <button type = 'submit'>
-        update
+      <button 
+        className = 'update-btn inside'
+        type = 'submit'>
+        <Send size = {18}/>
       </button>
+        </div>
     </form>
 
   )

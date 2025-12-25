@@ -1,0 +1,7 @@
+.pomfy{
+  font-family: 'Patrick Hand SC', cursive;
+  font-size: clamp(2rem, 2vw, 4rem);
+  letter-spacing: 0.1rem;
+  font-weight: 200;
+  
+}

@@ -1,0 +1,39 @@
+.container{
+  position: fixed;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  gap: clamp(1rem, 5vw, 2rem)
+  width: fit-content;
+  height: fit-content;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  padding-top: clamp(4rem, 5vw, 2rem);
+  padding-left: clamp(0.2rem, 5vw, 0.4rem);
+  padding-right: clamp(0.2rem, 5vw, 0.4rem);
+  padding-bottom: clamp(4rem, 5vw, 2rem);
+  border-radius: 3rem;
+  gap: clamp(3rem, 5vw, 6rem);
+  
+}
+
+.menu-btn{
+  width: clamp(1rem, 10vw, 2rem);
+  height: clamp(1rem, 10vw, 2rem);
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+}
+
+.menu-btn:hover{
+  transform: scale(1.1)
+}
