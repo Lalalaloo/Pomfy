@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import './switchStyle.css'
-import {image1, image2, image3, } from '../assets/images'
+import {image1, image2, image3, image4, image5, image6 } from '../assets/images'
 import BgSwitcher from './bgSwitcher.jsx'
 
 export default function BgStyle({ children }) {
   const [bgIndex, setBgIndex] = useState(0);
-  const bgImages = [image1, image2, image3];
+  const bgImages = [image1, image2, image3, image4, image5, image6];
 
   return(
     <div
