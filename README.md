@@ -27,7 +27,6 @@ Tech Stack:
 - Vercel
 
 What I Learned:
-This was my first React project built without tutorials. I learned quite a lot:
 - Complex state management across multiple hooks
 - Event handling (mouse events, drag logic with offsets)
 - Component composition and prop drilling
@@ -42,6 +41,6 @@ Bugs I Fixed:
 
 Through this entire building process, i was using Excalidraw to plan. I'll link it below.
 !!WARNING!!.. It's really really messy, with 100099420394 spelling mistakes, but it does show my thoughts.
-https://excalidraw.com/#json=Ski34Ey06OUdn4DDkyyJY,FeuGcgDc4B5-aZ2ieGlLYg
+https://excalidraw.com/#json=YD-v5GBZ2f7UVMrNKWgJ2,5cDq9buF9C4O5YQBSwUIkw 
   
 
