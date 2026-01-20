@@ -41,6 +41,6 @@ Bugs I Fixed:
 
 Through this entire building process, i was using Excalidraw to plan. I'll link it below.
 !!WARNING!!.. It's really really messy, with 100099420394 spelling mistakes, but it does show my thoughts.
-https://excalidraw.com/#json=YD-v5GBZ2f7UVMrNKWgJ2,5cDq9buF9C4O5YQBSwUIkw 
+https://excalidraw.com/#json=YD-v5GBZ2f7UVMrNKWgJ2,5cDq9buF9C4O5YQBS
   
 
