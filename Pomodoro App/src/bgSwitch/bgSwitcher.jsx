@@ -2,15 +2,15 @@ import React from 'react'
 import './switchStyle.css'
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-export default function BgSwitcher({ bgIndex, setBgIndex, bgImages }) {
+export default function BgSwitcher({ bgIndex, setBgIndex, bgVideos }) {
   
 
   const handleNext = () => {
-    setBgIndex((prevIndex) => (prevIndex + 1) % bgImages.length);
+    setBgIndex((prevIndex) => (prevIndex + 1) % bgVideos.length);
   }
 
   const handlePrev = () => {
-    setBgIndex((prevIndex) => (prevIndex - 1 + bgImages.length) % bgImages.length);
+    setBgIndex((prevIndex) => (prevIndex - 1 + bgVideos.length) % bgImages.length);
   }
 
   return(
@@ -29,7 +29,7 @@ export default function BgSwitcher({ bgIndex, setBgIndex, bgImages }) {
 
 
           <div className='dots'>
-            {bgImages.map((_, index) => (
+            {bgVideos.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setBgIndex(index)}
