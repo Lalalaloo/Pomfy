@@ -4,7 +4,8 @@ import './dragCard.css'
 
 export default function DraggableCard({children, style}){
 
-  const {position, handleMouseDown, cardRef} = useDraggable(window.innerWidth * 0.1, window.innerHeight * 0.1)
+  const {position, handleMouseDown,handleTouchStart, cardRef} = useDraggable(window.innerWidth * 0.1, window.innerHeight * 0.1)
+
 
   return(
     <div
@@ -12,6 +13,7 @@ export default function DraggableCard({children, style}){
       
       ref={cardRef}
       onMouseDown={handleMouseDown}
+      onTouchStart={handleTouchStart}
       style = {{
         cursor: 'grab',
         padding: '.4rem',
@@ -20,6 +22,7 @@ export default function DraggableCard({children, style}){
         position: 'absolute',
         top: `${position.y}px`,
         left: `${position.x}px`,
+        touchAction: 'none',
         width: 'fit-content',
         height: 'fit-content',
 
